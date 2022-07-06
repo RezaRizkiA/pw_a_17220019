@@ -11,7 +11,7 @@ function query($query)
     $conn = koneksi();
     $result = mysqli_query($conn, $query);
 
-    // jika data yang dihasilkan 1, maka tidak perlu dilooping
+    // jika data yang dihasilkan sama dengan 1, maka tidak perlu dilooping
     if (mysqli_num_rows($result) == 1) {
         return mysqli_fetch_assoc($result);
     }
